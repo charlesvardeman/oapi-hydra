@@ -1,0 +1,1 @@
+Copy of OAPI Openapi specification. This is a snapshot of the specification as of 09/20/2019 for development purposes. The original specification can be found in the [opengeospatial Github repository](https://github.com/opengeospatial/ogcapi-features/tree/master/core/openapi).
