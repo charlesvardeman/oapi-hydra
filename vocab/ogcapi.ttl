@@ -1,0 +1,104 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix schema: <http://schema.org/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix: time: <http://www.w3.org/2006/time#> .
+
+@prefix ogcapicore: <http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#> .
+
+ogcapi: a owl:Ontology , voaf:Vocabulary ;
+  dcterms:title "OGC API - Features - Part 1: Core"@en ;
+  dcterms:description "Formal Vocabulary for OGC API standard defining modular API building blocks to spatially enable Web APIs in a consistent way."@en ;
+  dcterms:creator [ a foaf:Agent ; foaf:name "Charels F Vardeman II"@en ] ;
+  dcterms:creator <https://orcid.org/0000-0003-4091-6059> ;
+  dcterms:rights "Copyright 2019 Charles Vardeman." ;
+ # dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:created "2019-09-23"^^xsd:date ;
+  rdfs:seeAlso "http://docs.opengeospatial.org/DRAFTS/17-069r2.html"@en ;
+  vann:preferredNamespacePrefix "ogcapicore" ;
+  vann:preferredNamespaceUri "<http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core" .
+
+# Should this be aligned to geosparql Feature?
+ogcapicore:Feature a rdfs:Class ; a owl:Class ;
+  rdfs:label "Feature"@en ;
+  skos:definition "Abstraction of a real world phenomena from ISO 19101-1:2014"@en;
+  rdfs:comment "Abstraction of a real world phenomena from ISO 19101-1:2014"@en;
+  skos:example "Abstraction of a real world phenomena from ISO 19101-1:2014"@en;
+# Not sure if this is the correct connection to geosparql.
+  owl:equivalentClass geosparql:Feature ;
+  rdfs:isDefinedBy ogcapicore: .
+
+ogcapicore:FeatureCollection a rdfs:Class ; a owl:Class ;
+  rdfs:label "Feature Collection"@en ;
+  skos:definition "Abstraction of a real world phenomena from ISO 19101-1:2014"@en;
+  rdfs:comment "Abstraction of a real world phenomena from ISO 19101-1:2014"@en;
+  skos:example "Abstraction of a real world phenomena from ISO 19101-1:2014"@en;
+  rdfs:isDefinedBy ogcapicore: .
+
+
+oagcapicore:Dataset a rdfs:Class ; a owl:Class ;
+    rdfs:label "Dataset"@en ;
+    skos:definition "Collection of data, published or curated by a single agent, and available for access or download in one or more formats"@en ;
+    rdfs:comment "Collection of data, published or curated by a single agent, and available for access or download in one or more formats"@en ;
+    skos:example ""@en ;
+ #  owl:equivalentClass dcat:Dataset . 
+ #  schema:sameAs schema:Dataset ; 
+    rdfs:isDefinedBy oagcapicore: .
+
+ogcapicore:LandingPage a rdfs:Class ; a owl:Class ;
+    rdfs:label "LandingPage"@en ;
+    skos:definition "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en ;
+    rdfs:comment "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information."@en ;
+    owl:equivalentClass dcat:landingPage ;
+    rdfs:isDefinedBy ogcapicore: .
+
+ogcapicore:ConfClasses a rdfs:Class ; a owl:Class ;
+    rdfs:label "Conformance Classes"@en ;
+    skos:definition "To support generic clients that want to access multiple OGC API Features implementations - and not just a specific API / server, the server has to declare the conformance classes it implements and conforms to."@en ;
+    rdfs:comment "To support generic clients that want to access multiple OGC API Features implementations - and not just a specific API / server, the server has to declare the conformance classes it implements and conforms to."@en ;
+    rdfs:isDefinedBy ogcapicore: .
+
+ogcapicore:Extent a rdfs:Class ; a owl:Class ;
+    rdfs:label "Extent"@en ;
+    skos:definition "The extent of the features in the collection. In the Core only spatial and temporal
+  extents are specified. Extensions may add additional members to represent other
+  extents, for example, thermal or pressure ranges."@en ;
+    rdfs:comment " The extent of the features in the collection. In the Core only spatial and temporal
+  extents are specified. Extensions may add additional members to represent other
+  extents, for example, thermal or pressure ranges."@en ;
+    rdfs:isDefinedBy ogcapicore: .
+
+ogcapicore:Exception a rdfs:Class ; a owl:Class ;
+    rdfs:label "Exception"@en ;
+    skos:definition "For error situations that originate from the server"@en ;
+    rdfs:comment "For error situations that originate from the server"@en ;
+    rdfs:isDefinedBy ogcapicore: .
+
+# These are in the schema definitions but may more appropriately be expressed by classes.
+ogcapicore:NumberMatched a rdfs:Class; a owl:Class .
+ogcapicore:NumberReturned a rdfs:Class, a owl:Class .
+
+    # ---------------------- Properties -----------------------------
+# Equivalent to the link collection speficiation in OGC API
+# Not sure if this is best described by DataTypeProperty  
+ogcapicore:link a owl:ObjectProperty ;
+    rdfs:label "link"@en ;
+    skos:definition ""@en ;
+    rdfs:isDefinedBy ogcapicore: .
+
+# Not sure if this is the correct property for timestamp
+ogcapicore:timestamp a owl:DataTypeProperty ;
+    rdfs:label "timestamp"@en ;
+    skos:definition ""@en ;
+    owl:equivalentProperty time:inXSDDateTimeStamp ;
+    rdfs:isDefinedBy ogcapicore: .
