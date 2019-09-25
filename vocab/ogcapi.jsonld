@@ -1,0 +1,412 @@
+[
+  {
+    "@id": "_:b0",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Charels F Vardeman II",
+        "@language": "en"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocommons/voaf#Vocabulary"
+  },
+  {
+    "@id": "http://www.opengis.net/ont/geosparql#Feature"
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://purl.org/vocommons/voaf#Vocabulary"
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "OGC API - Features - Part 1: Core",
+        "@language": "en"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Formal Vocabulary for OGC API standard defining modular API building blocks to spatially enable Web APIs in a consistent way.",
+        "@language": "en"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:b0"
+      },
+      {
+        "@id": "https://orcid.org/0000-0003-4091-6059"
+      }
+    ],
+    "http://purl.org/dc/terms/rights": [
+      {
+        "@value": "Copyright 2019 Charles Vardeman."
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@value": "2019-09-23",
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@value": "http://docs.opengeospatial.org/DRAFTS/17-069r2.html",
+        "@language": "en"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "ogcapicore"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "<http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#ConfClasses",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Conformance Classes",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "To support generic clients that want to access multiple OGC API Features implementations - and not just a specific API / server, the server has to declare the conformance classes it implements and conforms to.",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "To support generic clients that want to access multiple OGC API Features implementations - and not just a specific API / server, the server has to declare the conformance classes it implements and conforms to.",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#Dataset",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Dataset",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Collection of data, published or curated by a single agent, and available for access or download in one or more formats",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Collection of data, published or curated by a single agent, and available for access or download in one or more formats",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@value": "",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#Exception",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Exception",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "For error situations that originate from the server",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "For error situations that originate from the server",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#Extent",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Extent",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The extent of the features in the collection. In the Core only spatial and temporal extents are specified. Extensions may add additional members to represent other extents, for example, thermal or pressure ranges.",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": " The extent of the features in the collection. In the Core only spatial and temporal extents are specified. Extensions may add additional members to represent other extents, for example, thermal or pressure ranges.",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#Feature",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Feature",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Abstraction of a real world phenomena from ISO 19101-1:2014",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Abstraction of a real world phenomena from ISO 19101-1:2014",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@value": "Abstraction of a real world phenomena from ISO 19101-1:2014",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#Feature"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#FeatureCollection",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Feature Collection",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Abstraction of a real world phenomena from ISO 19101-1:2014",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Abstraction of a real world phenomena from ISO 19101-1:2014",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@value": "Abstraction of a real world phenomena from ISO 19101-1:2014",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#LandingPage",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "LandingPage",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#landingPage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#NumberMatched",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#NumberReturned",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#link",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "link",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#timestamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DataTypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "timestamp",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "",
+        "@language": "en"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentProperty": [
+      {
+        "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Class"
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#DataTypeProperty"
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#ObjectProperty"
+  },
+  {
+    "@id": "http://www.w3.org/2002/07/owl#Ontology"
+  },
+  {
+    "@id": "http://www.w3.org/2006/time#inXSDDateTimeStamp"
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#landingPage"
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Agent"
+  },
+  {
+    "@id": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "@id": "https://orcid.org/0000-0003-4091-6059"
+  }
+]

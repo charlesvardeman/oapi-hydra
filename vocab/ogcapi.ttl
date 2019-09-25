@@ -11,11 +11,11 @@
 @prefix schema: <http://schema.org/>.
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
-@prefix: time: <http://www.w3.org/2006/time#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 
 @prefix ogcapicore: <http://www.opengis.net/spec/ogcapi-features-1/1.0/req/core#> .
 
-ogcapi: a owl:Ontology , voaf:Vocabulary ;
+ogcapicore: a owl:Ontology, voaf:Vocabulary ;
   dcterms:title "OGC API - Features - Part 1: Core"@en ;
   dcterms:description "Formal Vocabulary for OGC API standard defining modular API building blocks to spatially enable Web APIs in a consistent way."@en ;
   dcterms:creator [ a foaf:Agent ; foaf:name "Charels F Vardeman II"@en ] ;
@@ -46,14 +46,14 @@ ogcapicore:FeatureCollection a rdfs:Class ; a owl:Class ;
   rdfs:isDefinedBy ogcapicore: .
 
 
-oagcapicore:Dataset a rdfs:Class ; a owl:Class ;
+ogcapicore:Dataset a rdfs:Class ; a owl:Class ;
     rdfs:label "Dataset"@en ;
     skos:definition "Collection of data, published or curated by a single agent, and available for access or download in one or more formats"@en ;
     rdfs:comment "Collection of data, published or curated by a single agent, and available for access or download in one or more formats"@en ;
     skos:example ""@en ;
  #  owl:equivalentClass dcat:Dataset . 
  #  schema:sameAs schema:Dataset ; 
-    rdfs:isDefinedBy oagcapicore: .
+    rdfs:isDefinedBy ogcapicore: .
 
 ogcapicore:LandingPage a rdfs:Class ; a owl:Class ;
     rdfs:label "LandingPage"@en ;
@@ -70,12 +70,8 @@ ogcapicore:ConfClasses a rdfs:Class ; a owl:Class ;
 
 ogcapicore:Extent a rdfs:Class ; a owl:Class ;
     rdfs:label "Extent"@en ;
-    skos:definition "The extent of the features in the collection. In the Core only spatial and temporal
-  extents are specified. Extensions may add additional members to represent other
-  extents, for example, thermal or pressure ranges."@en ;
-    rdfs:comment " The extent of the features in the collection. In the Core only spatial and temporal
-  extents are specified. Extensions may add additional members to represent other
-  extents, for example, thermal or pressure ranges."@en ;
+    skos:definition "The extent of the features in the collection. In the Core only spatial and temporal extents are specified. Extensions may add additional members to represent other extents, for example, thermal or pressure ranges."@en ;
+    rdfs:comment " The extent of the features in the collection. In the Core only spatial and temporal extents are specified. Extensions may add additional members to represent other extents, for example, thermal or pressure ranges."@en ;
     rdfs:isDefinedBy ogcapicore: .
 
 ogcapicore:Exception a rdfs:Class ; a owl:Class ;
@@ -86,7 +82,7 @@ ogcapicore:Exception a rdfs:Class ; a owl:Class ;
 
 # These are in the schema definitions but may more appropriately be expressed by classes.
 ogcapicore:NumberMatched a rdfs:Class; a owl:Class .
-ogcapicore:NumberReturned a rdfs:Class, a owl:Class .
+ogcapicore:NumberReturned a rdfs:Class; a owl:Class .
 
     # ---------------------- Properties -----------------------------
 # Equivalent to the link collection speficiation in OGC API
